@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! Bayko ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="hearts-container"></div>
+
+    <audio id="bg-music" loop>
+        <source src="https://favourable-beige-vc1953maqn.edgeone.app/happy-birthday-357371.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="celebration-song">
+        <source src="https://real-amethyst-toivloco90.edgeone.app/fireworks-11-419030.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="full-page active" id="page1">
+        <div class="vertical-stack">
+            <h1 id="typewriter"></h1>
+            <p class="subtitle">Today is all about celebrating you and the joy you bring to my life.</p>
+            <div class="emoji-row">❤️❤️❤️❤️</div>
+            <button class="cta-button" onclick="showNextPage(2)">Start the Celebration ✨</button>
+        </div>
+    </section>
+
+    <section class="full-page" id="page2">
+        <h2 class="section-title">Our Beautiful Memories</h2>
+        <div class="slider-container">
+            <div class="auto-slider" id="slider">
+                <div class="slide" onclick="zoomImage(this)"><div class="card"><img src="https://just-moccasin-8cvumlnlpd.edgeone.app/1.jpeg"><p class="image-caption">Lost in the moment, found in each other 💫❤️</p></div></div>
+                <div class="slide" onclick="zoomImage(this)"><div class="card"><img src="https://xerothermic-purple-vs6nrv57qi.edgeone.app/2.jpeg"><p class="image-caption">The stare… which made me forever yours 💝</p></div></div>
+                <div class="slide" onclick="zoomImage(this)"><div class="card"><img src="https://racial-blue-lq4uoxfi55.edgeone.app/3.jpeg"><p class="image-caption">If forever exists, it looks like this 💝</p></div></div>
+                <div class="slide" onclick="zoomImage(this)"><div class="card"><img src="https://horizontal-copper-1wgzh0zsy0.edgeone.app/7.jpeg"><p class="image-caption">Cutieee with her cute little birthday hat on her birthday bash… 👒🩷</p></div></div>
+                <div class="slide" onclick="zoomImage(this)"><div class="card"><img src="https://prime-sapphire-2mzton3lkn.edgeone.app/5%202.jpeg"><p class="image-caption">Muffin trying to be more innocent 🥺❤️</p></div></div>
+                <div class="slide" onclick="zoomImage(this)"><div class="card"><img src="https://orthodox-lavender-8ppaxu8xy5.edgeone.app/6.jpeg"><p class="image-caption">Forever together “Sang hoon tere” - Papa❤️</p></div></div>
+            </div>
+        </div>
+        <p class="tap-hint">Tap a photo to zoom in</p>
+        <button class="cta-button" onclick="showNextPage(3)">A Surprise for You 🎂</button>
+    </section>
+
+    <section class="full-page" id="page3">
+        <div id="cake-box" class="vertical-stack">
+            <h2 class="wish-title">Make a wish & Tap to Blow</h2>
+            <div class="cake-area">
+                <div class="candle" id="main-candle" onclick="blowCandle()">
+                    <div class="flame" id="flame"></div>
+                </div>
+                <div class="cake-main">
+                    <div class="frosting-top"></div>
+                    <div class="cake-body"></div>
+                </div>
+            </div>
+            <p class="tap-hint-center">Tap the flame!</p>
+        </div>
+
+        <div id="love-message" class="hidden vertical-stack">
+            <h1 class="glow-text">Happy Birthday Pikuuu,<br>I Love You! ❤️</h1>
+            <button class="cta-button" onclick="showNextPage(4)">Final Message 💌</button>
+        </div>
+    </section>
+
+    <section class="full-page" id="page4">
+        <div class="glow-card">
+            <h3 class="card-title">તમારા માટે એક ખાસ સંદેશ, મારી પીકુ 💕</h3>
+            <div class="card-content">
+                <p>મારો પ્રેમ, <br><br>
+                આજનો દિવસ ફક્ત તમારો જન્મદિવસ નથી—આ એ દિવસ છે જ્યારે તમે જન્મ લઈને આ દુનિયાને વધુ સુંદર બનાવી. તમે મારા અશાંત સમયમાં શાંતિ છો, મારી ખુશી છો, મારું સુરક્ષિત સ્થાન છો અને મારું સર્વસ્વ છો.
+
+આ વર્ષ તમને એ બધો પ્રેમ, આનંદ અને ઉષ્મા પરત આપે જે તમે રોજ મારા જીવનમાં લાવો છો. શબ્દોમાં વ્યક્ત કરી શકું તેનાથી પણ વધુ ઊંડો પ્રેમ હું તમને કરું છું.
+<br><br>
+હંમેશા તમારો,
+અથુઉ…
+<br><br>
+                <span class="highlight-glow">હંમેશા અને એથી પણ આગળ ❤️</span></p>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" onclick="closeZoom()">
+        <img id="zoom-img"><p id="zoom-caption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
